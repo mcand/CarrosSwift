@@ -23,6 +23,12 @@
 		D6B5D4961A45FA16006AB1C6 /* carros_classicos.xml in Resources */ = {isa = PBXBuildFile; fileRef = D6B5D4891A45FA16006AB1C6 /* carros_classicos.xml */; };
 		D6B5D4971A45FA16006AB1C6 /* carros_esportivos.xml in Resources */ = {isa = PBXBuildFile; fileRef = D6B5D48A1A45FA16006AB1C6 /* carros_esportivos.xml */; };
 		D6B5D4981A45FA16006AB1C6 /* carros_luxo.xml in Resources */ = {isa = PBXBuildFile; fileRef = D6B5D48B1A45FA16006AB1C6 /* carros_luxo.xml */; };
+		D6B5D49F1A45FFD3006AB1C6 /* ListaCarrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B5D49D1A45FFD3006AB1C6 /* ListaCarrosViewController.swift */; };
+		D6B5D4A01A45FFD3006AB1C6 /* ListaCarrosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B5D49E1A45FFD3006AB1C6 /* ListaCarrosViewController.xib */; };
+		D6B5D4A31A45FFF5006AB1C6 /* DetalhesCarroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B5D4A11A45FFF5006AB1C6 /* DetalhesCarroViewController.swift */; };
+		D6B5D4A41A45FFF5006AB1C6 /* DetalhesCarroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B5D4A21A45FFF5006AB1C6 /* DetalhesCarroViewController.xib */; };
+		D6B5D4A71A460034006AB1C6 /* SobreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B5D4A51A460034006AB1C6 /* SobreViewController.swift */; };
+		D6B5D4A81A460034006AB1C6 /* SobreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B5D4A61A460034006AB1C6 /* SobreViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +62,12 @@
 		D6B5D4891A45FA16006AB1C6 /* carros_classicos.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = carros_classicos.xml; sourceTree = "<group>"; };
 		D6B5D48A1A45FA16006AB1C6 /* carros_esportivos.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = carros_esportivos.xml; sourceTree = "<group>"; };
 		D6B5D48B1A45FA16006AB1C6 /* carros_luxo.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = carros_luxo.xml; sourceTree = "<group>"; };
+		D6B5D49D1A45FFD3006AB1C6 /* ListaCarrosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaCarrosViewController.swift; sourceTree = "<group>"; };
+		D6B5D49E1A45FFD3006AB1C6 /* ListaCarrosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListaCarrosViewController.xib; sourceTree = "<group>"; };
+		D6B5D4A11A45FFF5006AB1C6 /* DetalhesCarroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetalhesCarroViewController.swift; path = Carros/DetalhesCarroViewController.swift; sourceTree = SOURCE_ROOT; };
+		D6B5D4A21A45FFF5006AB1C6 /* DetalhesCarroViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DetalhesCarroViewController.xib; path = Carros/DetalhesCarroViewController.xib; sourceTree = SOURCE_ROOT; };
+		D6B5D4A51A460034006AB1C6 /* SobreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SobreViewController.swift; sourceTree = "<group>"; };
+		D6B5D4A61A460034006AB1C6 /* SobreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SobreViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,12 @@
 		D6B5D4581A45F8BC006AB1C6 /* Carros */ = {
 			isa = PBXGroup;
 			children = (
+				D6B5D4A11A45FFF5006AB1C6 /* DetalhesCarroViewController.swift */,
+				D6B5D4A21A45FFF5006AB1C6 /* DetalhesCarroViewController.xib */,
+				D6B5D49D1A45FFD3006AB1C6 /* ListaCarrosViewController.swift */,
+				D6B5D49E1A45FFD3006AB1C6 /* ListaCarrosViewController.xib */,
+				D6B5D4A51A460034006AB1C6 /* SobreViewController.swift */,
+				D6B5D4A61A460034006AB1C6 /* SobreViewController.xib */,
 				D6B5D47B1A45FA16006AB1C6 /* Resources */,
 				D6B5D45B1A45F8BC006AB1C6 /* AppDelegate.swift */,
 				D6B5D4641A45F8BC006AB1C6 /* LaunchScreen.xib */,
@@ -254,12 +272,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B5D4A41A45FFF5006AB1C6 /* DetalhesCarroViewController.xib in Resources */,
 				D6B5D4951A45FA16006AB1C6 /* carros_luxo.json in Resources */,
 				D6B5D48E1A45FA16006AB1C6 /* mclaren.png in Resources */,
 				D6B5D4911A45FA16006AB1C6 /* tab_sobre.png in Resources */,
+				D6B5D4A81A460034006AB1C6 /* SobreViewController.xib in Resources */,
 				D6B5D4931A45FA16006AB1C6 /* carros_classicos.json in Resources */,
 				D6B5D4941A45FA16006AB1C6 /* carros_esportivos.json in Resources */,
 				D6B5D48D1A45FA16006AB1C6 /* Images.xcassets in Resources */,
+				D6B5D4A01A45FFD3006AB1C6 /* ListaCarrosViewController.xib in Resources */,
 				D6B5D4901A45FA16006AB1C6 /* tab_carros@2x.png in Resources */,
 				D6B5D4981A45FA16006AB1C6 /* carros_luxo.xml in Resources */,
 				D6B5D4661A45F8BC006AB1C6 /* LaunchScreen.xib in Resources */,
@@ -285,6 +306,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6B5D4A31A45FFF5006AB1C6 /* DetalhesCarroViewController.swift in Sources */,
+				D6B5D49F1A45FFD3006AB1C6 /* ListaCarrosViewController.swift in Sources */,
+				D6B5D4A71A460034006AB1C6 /* SobreViewController.swift in Sources */,
 				D6B5D45C1A45F8BC006AB1C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

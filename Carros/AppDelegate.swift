@@ -17,6 +17,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds);
         self.window!.backgroundColor = UIColor.whiteColor();
+        // Cria os controllers
+        let listaController = ListaCarrosViewController(nibName: "ListaCarrosViewController", bundle: nil);
+        let sobreController = SobreViewController(nibName: "SobreViewController", bundle: nil);
+        let nav1 = UINavigationController()
+        let nav2 = UINavigationController()
+        // Insere ambos os view controller em navigations contorller
+        nav1.pushViewController(listaController, animated: false)
+        nav2.pushViewController(sobreController, animated: false)
+        // Cria o TabBar
+        let tabBarController = UITabBarController() 
+        tabBarController.viewControllers = [nav1, nav2]
+        nav1.tabBarItem.title = "Carros"
+        nav1.tabBarItem.image = UIImage(named: "tab_carros.png")
+        nav2.tabBarItem.title = "Sobre"
+        nav2.tabBarItem.image = UIImage(named: "tab_sobre.png")
+        // Configura o UITabBarController como o view controller principal
+        self.window!.rootViewController = tabBarController
         self.window!.makeKeyAndVisible();
         return true
     }

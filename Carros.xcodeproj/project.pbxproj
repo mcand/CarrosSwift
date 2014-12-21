@@ -109,12 +109,7 @@
 		D6B5D4581A45F8BC006AB1C6 /* Carros */ = {
 			isa = PBXGroup;
 			children = (
-				D6B5D4A11A45FFF5006AB1C6 /* DetalhesCarroViewController.swift */,
-				D6B5D4A21A45FFF5006AB1C6 /* DetalhesCarroViewController.xib */,
-				D6B5D49D1A45FFD3006AB1C6 /* ListaCarrosViewController.swift */,
-				D6B5D49E1A45FFD3006AB1C6 /* ListaCarrosViewController.xib */,
-				D6B5D4A51A460034006AB1C6 /* SobreViewController.swift */,
-				D6B5D4A61A460034006AB1C6 /* SobreViewController.xib */,
+				D6B5D4A91A4600BC006AB1C6 /* Classes */,
 				D6B5D47B1A45FA16006AB1C6 /* Resources */,
 				D6B5D45B1A45F8BC006AB1C6 /* AppDelegate.swift */,
 				D6B5D4641A45F8BC006AB1C6 /* LaunchScreen.xib */,
@@ -190,6 +185,35 @@
 				D6B5D48B1A45FA16006AB1C6 /* carros_luxo.xml */,
 			);
 			path = xml;
+			sourceTree = "<group>";
+		};
+		D6B5D4A91A4600BC006AB1C6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D6B5D4AB1A4600D3006AB1C6 /* Sobre */,
+				D6B5D4AA1A4600C8006AB1C6 /* ListaCarros */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		D6B5D4AA1A4600C8006AB1C6 /* ListaCarros */ = {
+			isa = PBXGroup;
+			children = (
+				D6B5D49D1A45FFD3006AB1C6 /* ListaCarrosViewController.swift */,
+				D6B5D49E1A45FFD3006AB1C6 /* ListaCarrosViewController.xib */,
+				D6B5D4A11A45FFF5006AB1C6 /* DetalhesCarroViewController.swift */,
+				D6B5D4A21A45FFF5006AB1C6 /* DetalhesCarroViewController.xib */,
+			);
+			name = ListaCarros;
+			sourceTree = "<group>";
+		};
+		D6B5D4AB1A4600D3006AB1C6 /* Sobre */ = {
+			isa = PBXGroup;
+			children = (
+				D6B5D4A51A460034006AB1C6 /* SobreViewController.swift */,
+				D6B5D4A61A460034006AB1C6 /* SobreViewController.xib */,
+			);
+			name = Sobre;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

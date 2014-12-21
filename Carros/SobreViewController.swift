@@ -7,29 +7,32 @@
 //
 
 import UIKit
+let URL_SOBRE = "http://livroiphone.com.br/carros/sobre.htm"
 
-class SobreViewController: UIViewController {
+class SobreViewController: UIViewController, UIWebViewDelegate {
+    @IBOutlet var webview : UIWebView!
+    @IBOutlet var progress : UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Sobre"
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func webViewDidFinishLoad(webView: UIWebView) {
+        // para a animação
+        progress.stopAnimating()
     }
-    */
+    
+    override func viewDidAppear(animated: Bool) {
+        // Inicia animação do activity indicator
+        self.progress.startAnimating()
+        // Carrega o URL no WebView
+        var url = NSURL(string: URL_SOBRE)!
+        var request = NSURLRequest(URL: url)
+        self.webview.loadRequest(request)
+        // delegate
+        self.webview.delegate = self
+    }
 
 }

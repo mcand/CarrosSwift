@@ -9,9 +9,17 @@
 import UIKit
 
 class DetalhesCarroViewController: UIViewController {
-
+    @IBOutlet var img: UIImageView!
+    @IBOutlet var tDesc: UITextView!
+    var carro: Carro? // variavel decladara com opcional
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let c = carro {
+            self.title = c.nome
+            self.tDesc.text = c.desc
+            let img = UIImage(named: c.url_foto)
+            self.img.image = img
+        }
 
         // Do any additional setup after loading the view.
     }

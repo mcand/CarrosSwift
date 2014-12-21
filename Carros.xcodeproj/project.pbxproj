@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6795E1E1A4739AB007FE35E /* CarroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6795E1D1A4739AB007FE35E /* CarroCell.swift */; };
+		D6795E201A473A29007FE35E /* CarroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6795E1F1A473A29007FE35E /* CarroCell.xib */; };
 		D68859A41A47265F00CF0D6B /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68859A31A47265F00CF0D6B /* Alerta.swift */; };
 		D68859A61A472D4900CF0D6B /* Carro.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68859A51A472D4900CF0D6B /* Carro.swift */; };
 		D68859A81A4730BE00CF0D6B /* CarroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68859A71A4730BE00CF0D6B /* CarroService.swift */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D6795E1D1A4739AB007FE35E /* CarroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarroCell.swift; sourceTree = "<group>"; };
+		D6795E1F1A473A29007FE35E /* CarroCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarroCell.xib; sourceTree = "<group>"; };
 		D68859A31A47265F00CF0D6B /* Alerta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
 		D68859A51A472D4900CF0D6B /* Carro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carro.swift; sourceTree = "<group>"; };
 		D68859A71A4730BE00CF0D6B /* CarroService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarroService.swift; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 				D6B5D4A21A45FFF5006AB1C6 /* DetalhesCarroViewController.xib */,
 				D68859A51A472D4900CF0D6B /* Carro.swift */,
 				D68859A71A4730BE00CF0D6B /* CarroService.swift */,
+				D6795E1D1A4739AB007FE35E /* CarroCell.swift */,
+				D6795E1F1A473A29007FE35E /* CarroCell.xib */,
 			);
 			name = ListaCarros;
 			sourceTree = "<group>";
@@ -320,6 +326,7 @@
 				D6B5D4A81A460034006AB1C6 /* SobreViewController.xib in Resources */,
 				D6B5D4931A45FA16006AB1C6 /* carros_classicos.json in Resources */,
 				D6B5D4941A45FA16006AB1C6 /* carros_esportivos.json in Resources */,
+				D6795E201A473A29007FE35E /* CarroCell.xib in Resources */,
 				D6B5D48D1A45FA16006AB1C6 /* Images.xcassets in Resources */,
 				D6B5D4A01A45FFD3006AB1C6 /* ListaCarrosViewController.xib in Resources */,
 				D6B5D4901A45FA16006AB1C6 /* tab_carros@2x.png in Resources */,
@@ -348,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6B5D4A31A45FFF5006AB1C6 /* DetalhesCarroViewController.swift in Sources */,
+				D6795E1E1A4739AB007FE35E /* CarroCell.swift in Sources */,
 				D68859A61A472D4900CF0D6B /* Carro.swift in Sources */,
 				D68859A41A47265F00CF0D6B /* Alerta.swift in Sources */,
 				D6B5D49F1A45FFD3006AB1C6 /* ListaCarrosViewController.swift in Sources */,

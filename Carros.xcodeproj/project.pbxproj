@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D68859A41A47265F00CF0D6B /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68859A31A47265F00CF0D6B /* Alerta.swift */; };
+		D68859A61A472D4900CF0D6B /* Carro.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68859A51A472D4900CF0D6B /* Carro.swift */; };
+		D68859A81A4730BE00CF0D6B /* CarroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68859A71A4730BE00CF0D6B /* CarroService.swift */; };
 		D6B5D45C1A45F8BC006AB1C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B5D45B1A45F8BC006AB1C6 /* AppDelegate.swift */; };
 		D6B5D4661A45F8BC006AB1C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B5D4641A45F8BC006AB1C6 /* LaunchScreen.xib */; };
 		D6B5D4721A45F8BC006AB1C6 /* CarrosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B5D4711A45F8BC006AB1C6 /* CarrosTests.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D68859A31A47265F00CF0D6B /* Alerta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
+		D68859A51A472D4900CF0D6B /* Carro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carro.swift; sourceTree = "<group>"; };
+		D68859A71A4730BE00CF0D6B /* CarroService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarroService.swift; sourceTree = "<group>"; };
 		D6B5D4561A45F8BC006AB1C6 /* Carros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B5D45A1A45F8BC006AB1C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6B5D45B1A45F8BC006AB1C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D688599E1A47262E00CF0D6B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D68859A31A47265F00CF0D6B /* Alerta.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		D6B5D44D1A45F8BC006AB1C6 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +204,7 @@
 		D6B5D4A91A4600BC006AB1C6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D688599E1A47262E00CF0D6B /* Utils */,
 				D6B5D4AB1A4600D3006AB1C6 /* Sobre */,
 				D6B5D4AA1A4600C8006AB1C6 /* ListaCarros */,
 			);
@@ -203,6 +218,8 @@
 				D6B5D49E1A45FFD3006AB1C6 /* ListaCarrosViewController.xib */,
 				D6B5D4A11A45FFF5006AB1C6 /* DetalhesCarroViewController.swift */,
 				D6B5D4A21A45FFF5006AB1C6 /* DetalhesCarroViewController.xib */,
+				D68859A51A472D4900CF0D6B /* Carro.swift */,
+				D68859A71A4730BE00CF0D6B /* CarroService.swift */,
 			);
 			name = ListaCarros;
 			sourceTree = "<group>";
@@ -331,8 +348,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6B5D4A31A45FFF5006AB1C6 /* DetalhesCarroViewController.swift in Sources */,
+				D68859A61A472D4900CF0D6B /* Carro.swift in Sources */,
+				D68859A41A47265F00CF0D6B /* Alerta.swift in Sources */,
 				D6B5D49F1A45FFD3006AB1C6 /* ListaCarrosViewController.swift in Sources */,
 				D6B5D4A71A460034006AB1C6 /* SobreViewController.swift in Sources */,
+				D68859A81A4730BE00CF0D6B /* CarroService.swift in Sources */,
 				D6B5D45C1A45F8BC006AB1C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +541,7 @@
 				D6B5D4771A45F8BC006AB1C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D6B5D4781A45F8BC006AB1C6 /* Build configuration list for PBXNativeTarget "CarrosTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +550,7 @@
 				D6B5D47A1A45F8BC006AB1C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

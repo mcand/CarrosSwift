@@ -24,9 +24,21 @@ class DetalhesCarroViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // controlar a troca de orientação (vertical/horizontal)
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        if (size.width > size.height){
+            println("horizontal")
+            tDesc.hidden = true
+            self.tabBarController!.tabBar.hidden = true
+            self.navigationController!.navigationBar.hidden = true
+        } else {
+            println("vertical")
+            tDesc.hidden = false
+            self.tabBarController!.tabBar.hidden = false
+            self.navigationController!.navigationBar.hidden = false
+        }
+        // Atualiza o status da action bar
+        self.setNeedsStatusBarAppearanceUpdate()
     }
     
 

@@ -12,6 +12,8 @@
 		D68859A41A47265F00CF0D6B /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68859A31A47265F00CF0D6B /* Alerta.swift */; };
 		D68859A61A472D4900CF0D6B /* Carro.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68859A51A472D4900CF0D6B /* Carro.swift */; };
 		D68859A81A4730BE00CF0D6B /* CarroService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68859A71A4730BE00CF0D6B /* CarroService.swift */; };
+		D68EDA691A4885B500425757 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EDA681A4885B500425757 /* MyNavigationController.swift */; };
+		D68EDA6B1A4889CD00425757 /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68EDA6A1A4889CD00425757 /* MyTabBarController.swift */; };
 		D6B5D45C1A45F8BC006AB1C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B5D45B1A45F8BC006AB1C6 /* AppDelegate.swift */; };
 		D6B5D4661A45F8BC006AB1C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B5D4641A45F8BC006AB1C6 /* LaunchScreen.xib */; };
 		D6B5D4721A45F8BC006AB1C6 /* CarrosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B5D4711A45F8BC006AB1C6 /* CarrosTests.swift */; };
@@ -52,6 +54,8 @@
 		D68859A31A47265F00CF0D6B /* Alerta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
 		D68859A51A472D4900CF0D6B /* Carro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carro.swift; sourceTree = "<group>"; };
 		D68859A71A4730BE00CF0D6B /* CarroService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarroService.swift; sourceTree = "<group>"; };
+		D68EDA681A4885B500425757 /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
+		D68EDA6A1A4889CD00425757 /* MyTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		D6B5D4561A45F8BC006AB1C6 /* Carros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6B5D45A1A45F8BC006AB1C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6B5D45B1A45F8BC006AB1C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				D68859A31A47265F00CF0D6B /* Alerta.swift */,
+				D68EDA681A4885B500425757 /* MyNavigationController.swift */,
+				D68EDA6A1A4889CD00425757 /* MyTabBarController.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -357,11 +363,13 @@
 				D6B5D4A31A45FFF5006AB1C6 /* DetalhesCarroViewController.swift in Sources */,
 				D6795E1E1A4739AB007FE35E /* CarroCell.swift in Sources */,
 				D68859A61A472D4900CF0D6B /* Carro.swift in Sources */,
+				D68EDA691A4885B500425757 /* MyNavigationController.swift in Sources */,
 				D68859A41A47265F00CF0D6B /* Alerta.swift in Sources */,
 				D6B5D49F1A45FFD3006AB1C6 /* ListaCarrosViewController.swift in Sources */,
 				D6B5D4A71A460034006AB1C6 /* SobreViewController.swift in Sources */,
 				D68859A81A4730BE00CF0D6B /* CarroService.swift in Sources */,
 				D6B5D45C1A45F8BC006AB1C6 /* AppDelegate.swift in Sources */,
+				D68EDA6B1A4889CD00425757 /* MyTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

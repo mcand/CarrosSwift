@@ -63,4 +63,9 @@ class ListaCarrosViewController: UIViewController, UITableViewDelegate, UITableV
         self.navigationController?.pushViewController(vc
             , animated: true)
     }
+    
+    override func supportedInterfaceOrientations() -> Int {
+        // apenas vertical
+        return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+    }
 }

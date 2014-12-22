@@ -34,5 +34,9 @@ class SobreViewController: UIViewController, UIWebViewDelegate {
         // delegate
         self.webview.delegate = self
     }
+    
+    override func supportedInterfaceOrientations() -> Int {
+        return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+    }
 
 }

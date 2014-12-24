@@ -17,8 +17,10 @@ class DetalhesCarroViewController: UIViewController {
         if let c = carro {
             self.title = c.nome
             self.tDesc.text = c.desc
-            let img = UIImage(named: c.url_foto)
-            self.img.image = img
+            let data = NSData(contentsOfURL: NSURL(string: c.url_foto)!)!
+            self.img.image = UIImage(data: data)
+//            let img = UIImage(named: c.url_foto)
+//            self.img.image = img
         }
 
         // Do any additional setup after loading the view.
@@ -40,16 +42,5 @@ class DetalhesCarroViewController: UIViewController {
         // Atualiza o status da action bar
         self.setNeedsStatusBarAppearanceUpdate()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

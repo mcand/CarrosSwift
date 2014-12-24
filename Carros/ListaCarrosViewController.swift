@@ -12,22 +12,39 @@ class ListaCarrosViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet var tableView: UITableView!
     // Array com a sintaxe '?' de objecto opcional no Swift
     var carros : Array<Carro> = []
+    var tipo = "classicos"
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Carros"
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.carros = CarroService.getCarros()
+//        self.carros = CarroService.getCarros()
+        self.buscarCarros()
         
         // Registra o tableview que vamos usar o CarroCell.xib
         var xib = UINib(nibName: "CarroCell", bundle: nil)
         self.tableView.registerNib(xib, forCellReuseIdentifier: "cell")
+        self.automaticallyAdjustsScrollViewInsets = false
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func alterarTipo(sender: UISegmentedControl){
+        var idx = sender.selectedSegmentIndex
+        switch (idx) {
+        case 0:
+            self.tipo = "classicos"
+        case 1:
+            self.tipo = "esportivos"
+        default:
+            self.tipo = "luxo"
+        }
+        self.buscarCarros()
     }
+    
+    func buscarCarros() {
+        self.carros = CarroService.getCarroByTipoFromFile(self.tipo)
+        self.tableView.reloadData()
+    }
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.carros.count // retorna 10 linhas
@@ -45,7 +62,9 @@ class ListaCarrosViewController: UIViewController, UITableViewDelegate, UITableV
 //        }
         cell.cellNome.text = carro.nome
         cell.cellDesc.text = carro.desc
-        cell.cellImg.image = UIImage(named: carro.url_foto)
+//        cell.cellImg.image = UIImage(named: carro.url_foto)
+        let data = NSData(contentsOfURL: NSURL(string: carro.url_foto)!)!
+        cell.cellImg.image = UIImage(data: data)
 //        let carro = self.carros[indexPath.row]
         //we know that cell is not empty now so we use ! to force unwrapping
 //        cell!.textLabel?.text = carro.nome

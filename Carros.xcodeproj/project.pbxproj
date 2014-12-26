@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D63787DC1A4D2F3C007434F5 /* SQLiteObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = D63787DB1A4D2F3C007434F5 /* SQLiteObjc.m */; };
 		D654E35B1A4CC00F00D60A8F /* DownloadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654E35A1A4CC00F00D60A8F /* DownloadImageView.swift */; };
 		D654E35D1A4CC27300D60A8F /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654E35C1A4CC27300D60A8F /* StringUtils.swift */; };
 		D654E35F1A4CC28B00D60A8F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654E35E1A4CC28B00D60A8F /* Utils.swift */; };
 		D654E3611A4D0AFE00D60A8F /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654E3601A4D0AFE00D60A8F /* Prefs.swift */; };
+		D666E39C1A4D1A6D0087C5EA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D666E39B1A4D1A6D0087C5EA /* libsqlite3.dylib */; };
+		D666E39E1A4D1AF60087C5EA /* SQLiteHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D666E39D1A4D1AF60087C5EA /* SQLiteHelper.swift */; };
 		D6795E1E1A4739AB007FE35E /* CarroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6795E1D1A4739AB007FE35E /* CarroCell.swift */; };
 		D6795E201A473A29007FE35E /* CarroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6795E1F1A473A29007FE35E /* CarroCell.xib */; };
 		D68859A41A47265F00CF0D6B /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68859A31A47265F00CF0D6B /* Alerta.swift */; };
@@ -55,10 +58,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D63787DA1A4D2F3C007434F5 /* SQLiteObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteObjc.h; sourceTree = "<group>"; };
+		D63787DB1A4D2F3C007434F5 /* SQLiteObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteObjc.m; sourceTree = "<group>"; };
 		D654E35A1A4CC00F00D60A8F /* DownloadImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadImageView.swift; sourceTree = "<group>"; };
 		D654E35C1A4CC27300D60A8F /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		D654E35E1A4CC28B00D60A8F /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D654E3601A4D0AFE00D60A8F /* Prefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
+		D666E39B1A4D1A6D0087C5EA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		D666E39D1A4D1AF60087C5EA /* SQLiteHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteHelper.swift; sourceTree = "<group>"; };
 		D6795E1D1A4739AB007FE35E /* CarroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarroCell.swift; sourceTree = "<group>"; };
 		D6795E1F1A473A29007FE35E /* CarroCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarroCell.xib; sourceTree = "<group>"; };
 		D68859A31A47265F00CF0D6B /* Alerta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
@@ -103,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D666E39C1A4D1A6D0087C5EA /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +135,7 @@
 				D68EDA6A1A4889CD00425757 /* MyTabBarController.swift */,
 				D654E35A1A4CC00F00D60A8F /* DownloadImageView.swift */,
 				D654E3601A4D0AFE00D60A8F /* Prefs.swift */,
+				D666E39D1A4D1AF60087C5EA /* SQLiteHelper.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -134,6 +143,7 @@
 		D6B5D44D1A45F8BC006AB1C6 = {
 			isa = PBXGroup;
 			children = (
+				D666E39B1A4D1A6D0087C5EA /* libsqlite3.dylib */,
 				D6B5D4581A45F8BC006AB1C6 /* Carros */,
 				D6B5D46E1A45F8BC006AB1C6 /* CarrosTests */,
 				D6B5D4571A45F8BC006AB1C6 /* Products */,
@@ -287,6 +297,8 @@
 				D6C06B2F1A4A9F340000A4A3 /* SMXMLDocument.h */,
 				D6C06B301A4A9F340000A4A3 /* SMXMLDocument.m */,
 				D6C06B2E1A4A9F340000A4A3 /* Carros-Bridging-Header.h */,
+				D63787DA1A4D2F3C007434F5 /* SQLiteObjc.h */,
+				D63787DB1A4D2F3C007434F5 /* SQLiteObjc.m */,
 			);
 			name = "Obj-C";
 			sourceTree = "<group>";
@@ -417,7 +429,9 @@
 				D654E35D1A4CC27300D60A8F /* StringUtils.swift in Sources */,
 				D6C06B2A1A4A8F350000A4A3 /* XMLCarroParser.swift in Sources */,
 				D6B5D49F1A45FFD3006AB1C6 /* ListaCarrosViewController.swift in Sources */,
+				D63787DC1A4D2F3C007434F5 /* SQLiteObjc.m in Sources */,
 				D6B5D4A71A460034006AB1C6 /* SobreViewController.swift in Sources */,
+				D666E39E1A4D1AF60087C5EA /* SQLiteHelper.swift in Sources */,
 				D68859A81A4730BE00CF0D6B /* CarroService.swift in Sources */,
 				D6B5D45C1A45F8BC006AB1C6 /* AppDelegate.swift in Sources */,
 				D6C06B311A4A9F340000A4A3 /* SMXMLDocument.m in Sources */,

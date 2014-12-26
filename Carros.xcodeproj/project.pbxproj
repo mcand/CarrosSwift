@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D654E35B1A4CC00F00D60A8F /* DownloadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654E35A1A4CC00F00D60A8F /* DownloadImageView.swift */; };
+		D654E35D1A4CC27300D60A8F /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654E35C1A4CC27300D60A8F /* StringUtils.swift */; };
+		D654E35F1A4CC28B00D60A8F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654E35E1A4CC28B00D60A8F /* Utils.swift */; };
+		D654E3611A4D0AFE00D60A8F /* Prefs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654E3601A4D0AFE00D60A8F /* Prefs.swift */; };
 		D6795E1E1A4739AB007FE35E /* CarroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6795E1D1A4739AB007FE35E /* CarroCell.swift */; };
 		D6795E201A473A29007FE35E /* CarroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6795E1F1A473A29007FE35E /* CarroCell.xib */; };
 		D68859A41A47265F00CF0D6B /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68859A31A47265F00CF0D6B /* Alerta.swift */; };
@@ -51,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D654E35A1A4CC00F00D60A8F /* DownloadImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadImageView.swift; sourceTree = "<group>"; };
+		D654E35C1A4CC27300D60A8F /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
+		D654E35E1A4CC28B00D60A8F /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		D654E3601A4D0AFE00D60A8F /* Prefs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prefs.swift; sourceTree = "<group>"; };
 		D6795E1D1A4739AB007FE35E /* CarroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarroCell.swift; sourceTree = "<group>"; };
 		D6795E1F1A473A29007FE35E /* CarroCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarroCell.xib; sourceTree = "<group>"; };
 		D68859A31A47265F00CF0D6B /* Alerta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
@@ -111,10 +119,14 @@
 		D688599E1A47262E00CF0D6B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				D654E35E1A4CC28B00D60A8F /* Utils.swift */,
+				D654E35C1A4CC27300D60A8F /* StringUtils.swift */,
 				D6C06B2D1A4A9F010000A4A3 /* Obj-C */,
 				D68859A31A47265F00CF0D6B /* Alerta.swift */,
 				D68EDA681A4885B500425757 /* MyNavigationController.swift */,
 				D68EDA6A1A4889CD00425757 /* MyTabBarController.swift */,
+				D654E35A1A4CC00F00D60A8F /* DownloadImageView.swift */,
+				D654E3601A4D0AFE00D60A8F /* Prefs.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -394,11 +406,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D654E35B1A4CC00F00D60A8F /* DownloadImageView.swift in Sources */,
 				D6B5D4A31A45FFF5006AB1C6 /* DetalhesCarroViewController.swift in Sources */,
 				D6795E1E1A4739AB007FE35E /* CarroCell.swift in Sources */,
 				D68859A61A472D4900CF0D6B /* Carro.swift in Sources */,
 				D68EDA691A4885B500425757 /* MyNavigationController.swift in Sources */,
+				D654E35F1A4CC28B00D60A8F /* Utils.swift in Sources */,
+				D654E3611A4D0AFE00D60A8F /* Prefs.swift in Sources */,
 				D68859A41A47265F00CF0D6B /* Alerta.swift in Sources */,
+				D654E35D1A4CC27300D60A8F /* StringUtils.swift in Sources */,
 				D6C06B2A1A4A8F350000A4A3 /* XMLCarroParser.swift in Sources */,
 				D6B5D49F1A45FFD3006AB1C6 /* ListaCarrosViewController.swift in Sources */,
 				D6B5D4A71A460034006AB1C6 /* SobreViewController.swift in Sources */,

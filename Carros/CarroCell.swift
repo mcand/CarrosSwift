@@ -11,5 +11,5 @@ import UIKit
 class CarroCell: UITableViewCell {
     @IBOutlet var cellNome: UILabel!
     @IBOutlet var cellDesc: UILabel!
-    @IBOutlet var cellImg: UIImageView!
+    @IBOutlet var cellImg: DownloadImageView!
 }

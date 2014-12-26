@@ -6,6 +6,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListaCarrosViewController" customModule="Carros" customModuleProvider="target">
             <connections>
+                <outlet property="progress" destination="klg-BA-c2h" id="VWy-gr-bwX"/>
+                <outlet property="segmentControl" destination="QUC-sY-tUm" id="zFZ-LH-dUh"/>
                 <outlet property="tableView" destination="9cv-In-H91" id="tPu-gv-m5W"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -36,9 +38,14 @@
                         <action selector="alterarTipo:" destination="-1" eventType="valueChanged" id="Xpx-ph-qOc"/>
                     </connections>
                 </segmentedControl>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="klg-BA-c2h">
+                    <rect key="frame" x="150" y="230" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="centerY" secondItem="klg-BA-c2h" secondAttribute="centerY" id="6fn-bD-Fcw"/>
+                <constraint firstAttribute="centerX" secondItem="klg-BA-c2h" secondAttribute="centerX" id="Hh9-Qr-743"/>
                 <constraint firstItem="9cv-In-H91" firstAttribute="top" secondItem="QUC-sY-tUm" secondAttribute="bottom" constant="13" id="XPd-SN-vIZ"/>
                 <constraint firstItem="9cv-In-H91" firstAttribute="centerX" secondItem="QUC-sY-tUm" secondAttribute="centerX" id="Xwo-Jw-sDA"/>
                 <constraint firstItem="QUC-sY-tUm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="77" id="gtB-yt-15Z"/>

@@ -9,7 +9,7 @@
 import UIKit
 
 class DetalhesCarroViewController: UIViewController {
-    @IBOutlet var img: UIImageView!
+    @IBOutlet var img: DownloadImageView!
     @IBOutlet var tDesc: UITextView!
     var carro: Carro? // variavel decladara com opcional
     override func viewDidLoad() {
@@ -17,8 +17,9 @@ class DetalhesCarroViewController: UIViewController {
         if let c = carro {
             self.title = c.nome
             self.tDesc.text = c.desc
-            let data = NSData(contentsOfURL: NSURL(string: c.url_foto)!)!
-            self.img.image = UIImage(data: data)
+            self.img.setUrl(c.url_foto)
+//            let data = NSData(contentsOfURL: NSURL(string: c.url_foto)!)!
+//            self.img.image = UIImage(data: data)
 //            let img = UIImage(named: c.url_foto)
 //            self.img.image = img
         }

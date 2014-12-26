@@ -10,6 +10,8 @@ import UIKit
 
 class ListaCarrosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var progress: UIActivityIndicatorView!
+    @IBOutlet var segmentControl: UISegmentedControl!
     // Array com a sintaxe '?' de objecto opcional no Swift
     var carros : Array<Carro> = []
     var tipo = "classicos"
@@ -25,6 +27,20 @@ class ListaCarrosViewController: UIViewController, UITableViewDelegate, UITableV
         var xib = UINib(nibName: "CarroCell", bundle: nil)
         self.tableView.registerNib(xib, forCellReuseIdentifier: "cell")
         self.automaticallyAdjustsScrollViewInsets = false
+        
+        let btAtualizar = UIBarButtonItem(title: "Atualizar", style: UIBarButtonItemStyle.Bordered, target: self, action: "atualizar")
+        self.navigationItem.rightBarButtonItem = btAtualizar
+        
+        var idx = Prefs.getInt("tipoIdx")
+        let s = Prefs.getString("tipoString")
+        if(s != nil) {
+            self.tipo = s
+        }
+        self.segmentControl.selectedSegmentIndex = idx
+    }
+    
+    func atualizar(){
+        buscarCarros()
     }
 
     @IBAction func alterarTipo(sender: UISegmentedControl){
@@ -37,12 +53,26 @@ class ListaCarrosViewController: UIViewController, UITableViewDelegate, UITableV
         default:
             self.tipo = "luxo"
         }
+        Prefs.setInt(idx, chave: "tipoIdx")
+        Prefs.setString(tipo, chave: "tipoString")
         self.buscarCarros()
     }
     
     func buscarCarros() {
-        self.carros = CarroService.getCarroByTipoFromFile(self.tipo)
-        self.tableView.reloadData()
+//        self.carros = CarroService.getCarroByTipoFromFile(self.tipo)
+//        self.tableView.reloadData()
+        progress.startAnimating()
+        var funcaoRetorno = {(carros: Array<Carro>, error: NSError!) -> Void in
+            if(error != nil){
+                Alerta.alerta("Erro " + error.localizedDescription, viewController: self)
+            } else{
+                self.carros = carros
+                self.tableView.reloadData()
+                self.progress.stopAnimating()
+            }
+        }
+        
+        CarroService.getCarrosByTipo(tipo, callback:funcaoRetorno)
     }
     
     
@@ -64,12 +94,12 @@ class ListaCarrosViewController: UIViewController, UITableViewDelegate, UITableV
         cell.cellDesc.text = carro.desc
 //        cell.cellImg.image = UIImage(named: carro.url_foto)
         let data = NSData(contentsOfURL: NSURL(string: carro.url_foto)!)!
-        cell.cellImg.image = UIImage(data: data)
+        cell.cellImg.setUrl(carro.url_foto)
+//        cell.cellImg.image = UIImage(data: data)
 //        let carro = self.carros[indexPath.row]
         //we know that cell is not empty now so we use ! to force unwrapping
 //        cell!.textLabel?.text = carro.nome
 //        cell!.imageView?.image = UIImage(named: carro.url_foto)
-        
         return cell
     }
     

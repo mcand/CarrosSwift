@@ -18,6 +18,8 @@ class DetalhesCarroViewController: UIViewController {
             self.title = c.nome
             self.tDesc.text = c.desc
             self.img.setUrl(c.url_foto)
+            let btDeletar = UIBarButtonItem(title: "Deletar", style: UIBarButtonItemStyle.Bordered, target: self, action: "onClickDeletar")
+            self.navigationItem.rightBarButtonItem = btDeletar
 //            let data = NSData(contentsOfURL: NSURL(string: c.url_foto)!)!
 //            self.img.image = UIImage(data: data)
 //            let img = UIImage(named: c.url_foto)
@@ -25,6 +27,26 @@ class DetalhesCarroViewController: UIViewController {
         }
 
         // Do any additional setup after loading the view.
+    }
+    
+    func onClickDeletar(){
+        var alert = UIAlertController(title: "Confirma?", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Destructive, handler: {(alert: UIAlertAction!) in self.deletar()}))
+
+        alert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertActionStyle.Destructive, handler: {(alert: UIAlertAction!) in }))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func deletar(){
+        var db = CarroDB()
+        db.delete(self.carro!)
+        Alerta.alert("Carro excluido com sucesso", viewController: self, action: { (UIAlertAction) -> Void in
+            self.goBack()
+        })
+    }
+    
+    func goBack(){
+        self.navigationController!.popViewControllerAnimated(true)
     }
 
     // controlar a troca de orientação (vertical/horizontal)

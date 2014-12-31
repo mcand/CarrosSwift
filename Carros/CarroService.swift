@@ -8,9 +8,9 @@
 
 import Foundation
 class CarroService {
-    class func getCarrosByTipo(tipo: String, callback: (carros:Array<Carro>, error: NSError!) -> Void) {
+    class func getCarrosByTipo(tipo: String, cache: Bool, callback: (carros:Array<Carro>, error: NSError!) -> Void) {
         var db = CarroDB()
-        var carros = db.getCarrosByTipo(tipo)
+        var carros: Array<Carro> = cache ? db.getCarrosByTipo(tipo) : []
         if (carros.count > 0) {
             db.close()
             callback(carros: carros, error: nil)

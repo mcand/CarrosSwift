@@ -15,13 +15,13 @@ class ListaCarrosViewController: UIViewController, UITableViewDelegate, UITableV
     // Array com a sintaxe '?' de objecto opcional no Swift
     var carros : Array<Carro> = []
     var tipo = "classicos"
+    var cache = true
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Carros"
         self.tableView.dataSource = self
         self.tableView.delegate = self
 //        self.carros = CarroService.getCarros()
-        self.buscarCarros()
         
         // Registra o tableview que vamos usar o CarroCell.xib
         var xib = UINib(nibName: "CarroCell", bundle: nil)
@@ -39,7 +39,14 @@ class ListaCarrosViewController: UIViewController, UITableViewDelegate, UITableV
         self.segmentControl.selectedSegmentIndex = idx
     }
     
+    override func viewDidAppear(animated: Bool) {
+        // Busca carros
+        self.buscarCarros()
+    }
+    
     func atualizar(){
+        // Não faz cache, para forçar o webservice
+        cache = false
         buscarCarros()
     }
 
@@ -72,7 +79,9 @@ class ListaCarrosViewController: UIViewController, UITableViewDelegate, UITableV
             }
         }
         
-        CarroService.getCarrosByTipo(tipo, callback:funcaoRetorno)
+        CarroService.getCarrosByTipo(tipo, cache: cache, callback:funcaoRetorno)
+        // Faz cache da proxima vez
+        cache = true
     }
     
     

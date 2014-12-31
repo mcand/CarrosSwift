@@ -14,4 +14,10 @@ class Alerta {
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         viewController.presentViewController(alert, animated: true, completion: nil)
     }
+    
+    class func alert(msg: String, viewController: UIViewController, action: ((UIAlertAction!) -> Void)!) {
+        var alert = UIAlertController(title: "Alerta", message: msg, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: action))
+        viewController.presentViewController(alert, animated: true, completion: nil)
+    }
 }

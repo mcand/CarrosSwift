@@ -35,6 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Configura o UITabBarController como o view controller principal
         self.window!.rootViewController = tabBarController
         self.window!.makeKeyAndVisible();
+        let db = CarroDB()
+        db.createTable()
+        db.close()
         return true
     }
 

@@ -26,7 +26,7 @@ class StringUtils {
     class func toCString(s: String) -> UnsafePointer<Int8> {
         // cast to NSString
         // const char *
-        let cstring = ("string" as NSString).UTF8String
+        let cstring = (s as NSString).UTF8String
         return cstring
     }
     

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D63787DC1A4D2F3C007434F5 /* SQLiteObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = D63787DB1A4D2F3C007434F5 /* SQLiteObjc.m */; };
+		D63787E21A541B84007434F5 /* CarroDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63787E11A541B84007434F5 /* CarroDB.swift */; };
 		D654E35B1A4CC00F00D60A8F /* DownloadImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654E35A1A4CC00F00D60A8F /* DownloadImageView.swift */; };
 		D654E35D1A4CC27300D60A8F /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654E35C1A4CC27300D60A8F /* StringUtils.swift */; };
 		D654E35F1A4CC28B00D60A8F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D654E35E1A4CC28B00D60A8F /* Utils.swift */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		D63787DA1A4D2F3C007434F5 /* SQLiteObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteObjc.h; sourceTree = "<group>"; };
 		D63787DB1A4D2F3C007434F5 /* SQLiteObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteObjc.m; sourceTree = "<group>"; };
+		D63787E11A541B84007434F5 /* CarroDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarroDB.swift; sourceTree = "<group>"; };
 		D654E35A1A4CC00F00D60A8F /* DownloadImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadImageView.swift; sourceTree = "<group>"; };
 		D654E35C1A4CC27300D60A8F /* StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		D654E35E1A4CC28B00D60A8F /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				D68859A71A4730BE00CF0D6B /* CarroService.swift */,
 				D68859A51A472D4900CF0D6B /* Carro.swift */,
 				D6C06B2C1A4A9E6B0000A4A3 /* XML-SAX */,
+				D63787E11A541B84007434F5 /* CarroDB.swift */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				D6B5D4A31A45FFF5006AB1C6 /* DetalhesCarroViewController.swift in Sources */,
 				D6795E1E1A4739AB007FE35E /* CarroCell.swift in Sources */,
 				D68859A61A472D4900CF0D6B /* Carro.swift in Sources */,
+				D63787E21A541B84007434F5 /* CarroDB.swift in Sources */,
 				D68EDA691A4885B500425757 /* MyNavigationController.swift in Sources */,
 				D654E35F1A4CC28B00D60A8F /* Utils.swift in Sources */,
 				D654E3611A4D0AFE00D60A8F /* Prefs.swift in Sources */,

@@ -2,28 +2,29 @@
 //  CarroDB.swift
 //  Carros
 //
-//  Created by Andre Furquin on 12/26/14.
+//  Created by Andre Furquin on 12/31/14.
 //  Copyright (c) 2014 Andre Furquim. All rights reserved.
 //
 
 import Foundation
 
-class CarroDB {
+class CarroDB{
     var db: SQLiteHelper
+    
     init() {
-        self.db = SQLiteHelper(database: "carros.sqlite3")
+        self.db = SQLiteHelper(database: "carro.db")
     }
     
-    // Cria tabela carros (apenas se já não existe)
-    func createTable(){
-        var sql = "create table if not exists carro (_id integer primary key autoincrement, nome text, desc text, url_foto text, url_info text, url_video text, latitude text, longitude text, tipo text);"
+    // Cria tabela de carros (apenas se já não existe)
+    func createTable() {
+        var sql = "create table if not exists carro(_id integer primary key autoincrement, nome text, desc text, url_foto text, url_info text, url_video text, latitude text, longitude text, tipo text);"
         db.execSql(sql)
     }
     
     func getCarrosByTipo(tipo: String) -> Array<Carro> {
-        var carros: Array<Carro> = []
-        let stmt = db.query("SELECT * FROM carro where tipo = ?", params:[tipo]) 
-        while(db.nextRow(stmt)){
+        var carros : Array<Carro> = []
+        let stmt = db.query("SELECT * from carro where tipo = ?", params:[tipo])
+        while (db.nextRow(stmt)) {
             var c = Carro()
             c.id = db.getInt(stmt, index: 0)
             c.nome = db.getString(stmt, index: 1)
@@ -42,27 +43,26 @@ class CarroDB {
     
     // Salva um novo carro ou atualiza se ja existe
     func save(carro: Carro) {
-        if(carro.id == 0) {
+        if (carro.id == 0) {
             // Insert
-            let sql = "insert or replace into carro(nome,desc,url_foto,url_info,url_video,latitude,longitude,tipo) VALUES (?,?,?,?,?,?,?,?);"
-            let params = [carro.nome,carro.desc,carro.url_foto,carro.url_info,carro.url_video,carro.latitude,carro.longitude,carro.tipo]
+            let sql = "insert or replace into carro (nome, desc, url_foto, url_info, url_video, latitude, longitude, tipo) VALUES (?,?,?,?,?,?,?,?);"
+            let params = [carro.nome, carro.desc, carro.url_foto, carro.url_info, carro.url_video, carro.latitude, carro.longitude, carro.tipo]
             let id = db.execSql(sql, params: params)
-            println("Carro \(carro.nome), id: \(id) salvo com sucesso.")
+            println("Carro \(carro.nome), id: \(id) salvo com sucessso.")
         } else {
             // Update
-            let sql = "update carro set nome=?, desc=?, url_foto=?, url_info=?, url_video=?, latitude=?, longitude=?, tipo=?) where _id=? VALUES(?,?,?,?,?,?,?,?,?);"
+            let sql = "update carro set (nome=?, desc=?, url_foto=?, url_info=?, url_video=?, latitude=?, longitude=?, tipo=?) where _id=? VALUES (?,?,?,?,?,?,?,?,?);"
             let params = [carro.nome, carro.desc, carro.url_foto, carro.url_info, carro.url_video, carro.latitude, carro.longitude, carro.id]
             let id = db.execSql(sql, params: params)
-            println("Carro \(carro.nome), id: \(id) \(carro.id) atualizado com sucesso.")
+            println("Carro \(carro.nome), id: \(id)/\(carro.id) atualizado com sucesso.")
         }
     }
     
-    // Deleta carro
+    // Deleta o carro
     func delete(carro: Carro) {
         let sql = "delete from carro where _id = ?"
         db.execSql(sql, params: [carro.id])
     }
-    
     // Deleta todos os carros do tipo informado
     func deleteCarrosTipo(tipo: String) {
         var carros = self.getCarrosByTipo(tipo)
@@ -70,8 +70,9 @@ class CarroDB {
             self.delete(c)
         }
     }
-    
-    func close() {
+    func close(){
+        // Fecha o banco de dados
         self.db.close()
     }
 }
+

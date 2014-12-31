@@ -9,6 +9,8 @@
 import Foundation
 
 class Carro {
+    var id: Int = 0
+    var tipo: String = ""
     var nome: String = ""
     var desc: String = ""
     // Url para a foto do carro

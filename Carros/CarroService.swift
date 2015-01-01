@@ -9,7 +9,7 @@
 import Foundation
 class CarroService {
     class func getCarrosByTipo(tipo: String, cache: Bool, callback: (carros:Array<Carro>, error: NSError!) -> Void) {
-        var db = CarroDB()
+        var db = CarroDBCoreData()
         var carros: Array<Carro> = cache ? db.getCarrosByTipo(tipo) : []
         if (carros.count > 0) {
             db.close()
@@ -26,7 +26,7 @@ class CarroService {
             } else {
                 let carros = CarroService.parserJson(data)
                 if (carros.count > 0) {
-                    db = CarroDB()
+                    db = CarroDBCoreData()
                     db.deleteCarrosTipo(tipo)
                     for c in carros {
                         c.tipo = tipo
@@ -81,7 +81,7 @@ class CarroService {
         var arrayCarros: NSArray = jsonCarros["carro"] as NSArray
         for obj:AnyObject in arrayCarros {
             var dict = obj as NSDictionary
-            var carro = Carro()
+            var carro = CarroDBCoreData.newInstance()
             carro.nome = dict["nome"] as String
             carro.desc = dict["desc"] as String
             carro.url_info = dict["url_info"] as String

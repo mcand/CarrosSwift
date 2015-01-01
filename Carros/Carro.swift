@@ -2,24 +2,23 @@
 //  Carro.swift
 //  Carros
 //
-//  Created by Andre Furquin on 12/21/14.
-//  Copyright (c) 2014 Andre Furquim. All rights reserved.
+//  Created by Andre Furquin on 1/1/15.
+//  Copyright (c) 2015 Andre Furquim. All rights reserved.
 //
 
 import Foundation
+import CoreData
 
-class Carro {
-    var id: Int = 0
-    var tipo: String = ""
-    var nome: String = ""
-    var desc: String = ""
-    // Url para a foto do carro
-    var url_foto: String = ""
-    // Url com um site com informações do carro
-    var url_info: String = ""
-    // Url com o video do carro
-    var url_video: String = ""
-    // Coordenadas da fábrica ou país de origem do carro
-    var latitude: String = ""
-    var longitude: String = ""
+class Carro: NSManagedObject {
+
+    @NSManaged var desc: String
+    @NSManaged var latitude: String
+    @NSManaged var longitude: String
+    @NSManaged var nome: String
+    @NSManaged var timestamp: NSDate
+    @NSManaged var tipo: String
+    @NSManaged var url_foto: String
+    @NSManaged var url_info: String
+    @NSManaged var url_video: String
+
 }

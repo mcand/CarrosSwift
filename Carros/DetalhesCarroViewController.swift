@@ -38,7 +38,7 @@ class DetalhesCarroViewController: UIViewController {
     }
     
     func deletar(){
-        var db = CarroDB()
+        var db = CarroDBCoreData()
         db.delete(self.carro!)
         Alerta.alert("Carro excluido com sucesso", viewController: self, action: { (UIAlertAction) -> Void in
             self.goBack()

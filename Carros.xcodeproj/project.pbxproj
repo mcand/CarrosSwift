@@ -51,6 +51,9 @@
 		D6C7E9501A553A2700BDE28B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7E94E1A553A2700BDE28B /* MapViewController.swift */; };
 		D6C7E9511A553A2700BDE28B /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C7E94F1A553A2700BDE28B /* MapViewController.xib */; };
 		D6C7E9531A56364C00BDE28B /* GpsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7E9521A56364B00BDE28B /* GpsMapViewController.swift */; };
+		D6C7E9861A568B4700BDE28B /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7E9841A568B4700BDE28B /* VideoViewController.swift */; };
+		D6C7E9871A568B4700BDE28B /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C7E9851A568B4700BDE28B /* VideoViewController.xib */; };
+		D6C7E9891A568E4E00BDE28B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7E9881A568E4E00BDE28B /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,9 @@
 		D6C7E94E1A553A2700BDE28B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		D6C7E94F1A553A2700BDE28B /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		D6C7E9521A56364B00BDE28B /* GpsMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpsMapViewController.swift; sourceTree = "<group>"; };
+		D6C7E9841A568B4700BDE28B /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		D6C7E9851A568B4700BDE28B /* VideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
+		D6C7E9881A568E4E00BDE28B /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,7 @@
 				D654E35A1A4CC00F00D60A8F /* DownloadImageView.swift */,
 				D654E3601A4D0AFE00D60A8F /* Prefs.swift */,
 				D666E39D1A4D1AF60087C5EA /* SQLiteHelper.swift */,
+				D6C7E9881A568E4E00BDE28B /* String+Extensions.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -279,6 +286,8 @@
 				D6C7E94E1A553A2700BDE28B /* MapViewController.swift */,
 				D6C7E94F1A553A2700BDE28B /* MapViewController.xib */,
 				D6C7E9521A56364B00BDE28B /* GpsMapViewController.swift */,
+				D6C7E9841A568B4700BDE28B /* VideoViewController.swift */,
+				D6C7E9851A568B4700BDE28B /* VideoViewController.xib */,
 			);
 			name = ListaCarros;
 			sourceTree = "<group>";
@@ -421,6 +430,7 @@
 				D6B5D48F1A45FA16006AB1C6 /* tab_carros.png in Resources */,
 				D6B5D4971A45FA16006AB1C6 /* carros_esportivos.xml in Resources */,
 				D6B5D4921A45FA16006AB1C6 /* tab_sobre@2x.png in Resources */,
+				D6C7E9871A568B4700BDE28B /* VideoViewController.xib in Resources */,
 				D6B5D48C1A45FA16006AB1C6 /* ferrari_ff.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +455,7 @@
 				D6C7E9501A553A2700BDE28B /* MapViewController.swift in Sources */,
 				D68859A61A472D4900CF0D6B /* Carro.swift in Sources */,
 				D63787E21A541B84007434F5 /* CarroDB.swift in Sources */,
+				D6C7E9861A568B4700BDE28B /* VideoViewController.swift in Sources */,
 				D68EDA691A4885B500425757 /* MyNavigationController.swift in Sources */,
 				D654E35F1A4CC28B00D60A8F /* Utils.swift in Sources */,
 				D654E3611A4D0AFE00D60A8F /* Prefs.swift in Sources */,
@@ -457,6 +468,7 @@
 				D6C7E9531A56364C00BDE28B /* GpsMapViewController.swift in Sources */,
 				D666E39E1A4D1AF60087C5EA /* SQLiteHelper.swift in Sources */,
 				D68859A81A4730BE00CF0D6B /* CarroService.swift in Sources */,
+				D6C7E9891A568E4E00BDE28B /* String+Extensions.swift in Sources */,
 				D6B5D45C1A45F8BC006AB1C6 /* AppDelegate.swift in Sources */,
 				D6C06B311A4A9F340000A4A3 /* SMXMLDocument.m in Sources */,
 				D68EDA6B1A4889CD00425757 /* MyTabBarController.swift in Sources */,

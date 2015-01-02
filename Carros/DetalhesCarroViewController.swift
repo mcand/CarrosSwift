@@ -71,5 +71,11 @@ class DetalhesCarroViewController: UIViewController {
         vc.carro = self.carro
         self.navigationController!.pushViewController(vc, animated: true)
     }
+    
+    @IBAction func visualizarVideo() {
+        let vc = VideoViewController(nibName: "VideoViewController", bundle: nil)
+        vc.carro = self.carro
+        self.navigationController!.pushViewController(vc, animated: true)
+    }
 
 }

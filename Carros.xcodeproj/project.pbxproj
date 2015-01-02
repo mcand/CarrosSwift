@@ -46,6 +46,11 @@
 		D6B5D4A81A460034006AB1C6 /* SobreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6B5D4A61A460034006AB1C6 /* SobreViewController.xib */; };
 		D6C06B2A1A4A8F350000A4A3 /* XMLCarroParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C06B291A4A8F350000A4A3 /* XMLCarroParser.swift */; };
 		D6C06B311A4A9F340000A4A3 /* SMXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C06B301A4A9F340000A4A3 /* SMXMLDocument.m */; };
+		D6C7E94B1A55315600BDE28B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C7E94A1A55315600BDE28B /* MapKit.framework */; };
+		D6C7E94D1A55315E00BDE28B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6C7E94C1A55315E00BDE28B /* CoreLocation.framework */; };
+		D6C7E9501A553A2700BDE28B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7E94E1A553A2700BDE28B /* MapViewController.swift */; };
+		D6C7E9511A553A2700BDE28B /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C7E94F1A553A2700BDE28B /* MapViewController.xib */; };
+		D6C7E9531A56364C00BDE28B /* GpsMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7E9521A56364B00BDE28B /* GpsMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +110,11 @@
 		D6C06B2E1A4A9F340000A4A3 /* Carros-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Carros-Bridging-Header.h"; sourceTree = "<group>"; };
 		D6C06B2F1A4A9F340000A4A3 /* SMXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMXMLDocument.h; sourceTree = "<group>"; };
 		D6C06B301A4A9F340000A4A3 /* SMXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMXMLDocument.m; sourceTree = "<group>"; };
+		D6C7E94A1A55315600BDE28B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D6C7E94C1A55315E00BDE28B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D6C7E94E1A553A2700BDE28B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D6C7E94F1A553A2700BDE28B /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		D6C7E9521A56364B00BDE28B /* GpsMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GpsMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +122,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6C7E94D1A55315E00BDE28B /* CoreLocation.framework in Frameworks */,
+				D6C7E94B1A55315600BDE28B /* MapKit.framework in Frameworks */,
 				D666E39C1A4D1A6D0087C5EA /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +157,8 @@
 		D6B5D44D1A45F8BC006AB1C6 = {
 			isa = PBXGroup;
 			children = (
+				D6C7E94C1A55315E00BDE28B /* CoreLocation.framework */,
+				D6C7E94A1A55315600BDE28B /* MapKit.framework */,
 				D666E39B1A4D1A6D0087C5EA /* libsqlite3.dylib */,
 				D6B5D4581A45F8BC006AB1C6 /* Carros */,
 				D6B5D46E1A45F8BC006AB1C6 /* CarrosTests */,
@@ -262,6 +276,9 @@
 				D6B5D4A21A45FFF5006AB1C6 /* DetalhesCarroViewController.xib */,
 				D6795E1D1A4739AB007FE35E /* CarroCell.swift */,
 				D6795E1F1A473A29007FE35E /* CarroCell.xib */,
+				D6C7E94E1A553A2700BDE28B /* MapViewController.swift */,
+				D6C7E94F1A553A2700BDE28B /* MapViewController.xib */,
+				D6C7E9521A56364B00BDE28B /* GpsMapViewController.swift */,
 			);
 			name = ListaCarros;
 			sourceTree = "<group>";
@@ -392,6 +409,7 @@
 				D6B5D4911A45FA16006AB1C6 /* tab_sobre.png in Resources */,
 				D6B5D4A81A460034006AB1C6 /* SobreViewController.xib in Resources */,
 				D6B5D4931A45FA16006AB1C6 /* carros_classicos.json in Resources */,
+				D6C7E9511A553A2700BDE28B /* MapViewController.xib in Resources */,
 				D6B5D4941A45FA16006AB1C6 /* carros_esportivos.json in Resources */,
 				D6795E201A473A29007FE35E /* CarroCell.xib in Resources */,
 				D6B5D48D1A45FA16006AB1C6 /* Images.xcassets in Resources */,
@@ -424,6 +442,7 @@
 				D654E35B1A4CC00F00D60A8F /* DownloadImageView.swift in Sources */,
 				D6B5D4A31A45FFF5006AB1C6 /* DetalhesCarroViewController.swift in Sources */,
 				D6795E1E1A4739AB007FE35E /* CarroCell.swift in Sources */,
+				D6C7E9501A553A2700BDE28B /* MapViewController.swift in Sources */,
 				D68859A61A472D4900CF0D6B /* Carro.swift in Sources */,
 				D63787E21A541B84007434F5 /* CarroDB.swift in Sources */,
 				D68EDA691A4885B500425757 /* MyNavigationController.swift in Sources */,
@@ -435,6 +454,7 @@
 				D6B5D49F1A45FFD3006AB1C6 /* ListaCarrosViewController.swift in Sources */,
 				D63787DC1A4D2F3C007434F5 /* SQLiteObjc.m in Sources */,
 				D6B5D4A71A460034006AB1C6 /* SobreViewController.swift in Sources */,
+				D6C7E9531A56364C00BDE28B /* GpsMapViewController.swift in Sources */,
 				D666E39E1A4D1AF60087C5EA /* SQLiteHelper.swift in Sources */,
 				D68859A81A4730BE00CF0D6B /* CarroService.swift in Sources */,
 				D6B5D45C1A45F8BC006AB1C6 /* AppDelegate.swift in Sources */,

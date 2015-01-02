@@ -65,5 +65,11 @@ class DetalhesCarroViewController: UIViewController {
         // Atualiza o status da action bar
         self.setNeedsStatusBarAppearanceUpdate()
     }
+    
+    @IBAction func visualizarMapa() {
+        let vc = GpsMapViewController(nibName: "MapViewController", bundle: nil)
+        vc.carro = self.carro
+        self.navigationController!.pushViewController(vc, animated: true)
+    }
 
 }

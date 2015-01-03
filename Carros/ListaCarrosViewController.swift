@@ -75,8 +75,15 @@ class ListaCarrosViewController: UIViewController, UITableViewDelegate, UITableV
             } else{
                 self.carros = carros
                 self.tableView.reloadData()
-                self.progress.stopAnimating()
+                if (Utils.isIpad() && carros.count > 0) {
+                    // Seta o primeiro da direita
+                    let c = carros[0]
+                    let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+                    let detalhes = appDelegate.detalhesController
+                    detalhes.updateCarro(c)
+                }
             }
+            self.progress.stopAnimating()
         }
         
         CarroService.getCarrosByTipo(tipo, cache: cache, callback:funcaoRetorno)
@@ -115,15 +122,27 @@ class ListaCarrosViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let linha = indexPath.row
         let carro = self.carros[linha]
-//        Alerta.alerta("Selecionou o carro: \(carro.nome)", viewController: self)
-        let vc = DetalhesCarroViewController(nibName: "DetalhesCarroViewController", bundle: nil)
-        vc.carro = carro
-        self.navigationController?.pushViewController(vc
-            , animated: true)
+        if (Utils.isIphone()) {
+            // Faz navegação
+            let vc = DetalhesCarroViewController(nibName: "DetalhesCarroViewController", bundle: nil)
+            vc.carro = carro
+            self.navigationController?.pushViewController(vc
+                , animated: true)
+        } else {
+            // iPad: Atualiza os detalhes na direita
+            let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+            let detalhes = appDelegate.detalhesController
+            detalhes.updateCarro(carro)
+        }
+
     }
     
     override func supportedInterfaceOrientations() -> Int {
         // apenas vertical
-        return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+        if (Utils.isIphone()) {
+            return Int(UIInterfaceOrientationMask.Portrait.rawValue)
+        } else {
+            return Int(UIInterfaceOrientationMask.All.rawValue)
+        }
     }
 }

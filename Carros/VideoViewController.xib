@@ -22,12 +22,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="JXQ-7t-Zzl" secondAttribute="bottom" id="0FP-Pz-6OQ"/>
-                <constraint firstItem="JXQ-7t-Zzl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MLO-CW-P8f"/>
-                <constraint firstAttribute="centerX" secondItem="JXQ-7t-Zzl" secondAttribute="centerX" id="Spi-xC-ezP"/>
-                <constraint firstAttribute="trailing" secondItem="JXQ-7t-Zzl" secondAttribute="trailing" id="m7c-8H-yLJ"/>
-                <constraint firstAttribute="centerY" secondItem="JXQ-7t-Zzl" secondAttribute="centerY" id="qTb-MH-K40"/>
-                <constraint firstItem="JXQ-7t-Zzl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sgY-3U-VvA"/>
+                <constraint firstItem="JXQ-7t-Zzl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Csb-gW-S80"/>
+                <constraint firstAttribute="bottom" secondItem="JXQ-7t-Zzl" secondAttribute="bottom" id="dmj-Xd-IP7"/>
+                <constraint firstItem="JXQ-7t-Zzl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iVw-CA-mhQ"/>
+                <constraint firstAttribute="trailing" secondItem="JXQ-7t-Zzl" secondAttribute="trailing" id="kR5-rO-oft"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>

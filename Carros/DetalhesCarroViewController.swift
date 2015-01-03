@@ -8,13 +8,14 @@
 
 import UIKit
 
-class DetalhesCarroViewController: UIViewController {
+class DetalhesCarroViewController: UIViewController, UISplitViewControllerDelegate {
     @IBOutlet var img: DownloadImageView!
     @IBOutlet var tDesc: UITextView!
     var carro: Carro? // variavel decladara com opcional
     override func viewDidLoad() {
         super.viewDidLoad()
         if let c = carro {
+            updateCarro(c)
             self.title = c.nome
             self.tDesc.text = c.desc
             self.img.setUrl(c.url_foto)
@@ -27,6 +28,13 @@ class DetalhesCarroViewController: UIViewController {
         }
 
         // Do any additional setup after loading the view.
+    }
+    
+    func updateCarro(c: Carro) {
+        self.carro = c
+        self.title = c.nome
+        self.tDesc.text = c.desc;
+        self.img.setUrl(c.url_foto)
     }
     
     func onClickDeletar(){
@@ -51,6 +59,7 @@ class DetalhesCarroViewController: UIViewController {
 
     // controlar a troca de orientação (vertical/horizontal)
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        if (Utils.isIphone()){
         if (size.width > size.height){
             println("horizontal")
             tDesc.hidden = true
@@ -64,12 +73,42 @@ class DetalhesCarroViewController: UIViewController {
         }
         // Atualiza o status da action bar
         self.setNeedsStatusBarAppearanceUpdate()
+        }
     }
     
-    @IBAction func visualizarMapa() {
+    func splitViewController(svc: UISplitViewController, willChangeToDisplayMode displayMode: UISplitViewControllerDisplayMode) {
+        let vertical = displayMode == UISplitViewControllerDisplayMode.PrimaryHidden;
+        if (vertical) {
+            // insere o botao na navigation bar
+            let btPopover = UIBarButtonItem(title: "Lista", style: UIBarButtonItemStyle.Bordered, target: self, action: "onClickPopover")
+            self.navigationItem.leftBarButtonItem = btPopover
+        } else {
+            // remove o botao
+            self.navigationItem.leftBarButtonItem = nil
+        }
+    }
+    
+    func onClickPopover(){
+        // mostra o view controller no popover
+        let bt = self.navigationItem.leftBarButtonItem
+        let vc = ListaCarrosViewController()
+        let popover = UIPopoverController(contentViewController: vc)
+        popover.popoverContentSize = CGSize(width: 400, height: 800)
+        let rect = CGRect(x: 10, y: 10, width: 10, height: 10)
+        popover.presentPopoverFromRect(rect, inView: self.view, permittedArrowDirections: UIPopoverArrowDirection.Any, animated: true)
+    }
+    
+    @IBAction func visualizarMapa(bt: UIButton) {
         let vc = GpsMapViewController(nibName: "MapViewController", bundle: nil)
         vc.carro = self.carro
-        self.navigationController!.pushViewController(vc, animated: true)
+        
+        if(Utils.isIphone()) {
+            self.navigationController!.pushViewController(vc, animated: true)
+        } else{
+            let popOver = UIPopoverController(contentViewController: vc)
+            popOver.popoverContentSize = CGSize(width: 500, height: 500)
+            popOver.presentPopoverFromRect(bt.bounds, inView: bt, permittedArrowDirections: UIPopoverArrowDirection.Any, animated: true)
+        }
     }
     
     @IBAction func visualizarVideo() {
@@ -77,5 +116,7 @@ class DetalhesCarroViewController: UIViewController {
         vc.carro = self.carro
         self.navigationController!.pushViewController(vc, animated: true)
     }
+    
+    
 
 }

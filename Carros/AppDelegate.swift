@@ -10,13 +10,31 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var listaController: ListaCarrosViewController!
+    var detalhesController: DetalhesCarroViewController!
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds);
         self.window!.backgroundColor = UIColor.whiteColor();
+        let iPad = Utils.isIpad()
+        if (iPad) {
+            self.initIpad()
+        } else {
+            self.initIphone()
+        }
+        
+        let db = CarroDB()
+        db.createTable()
+        db.close()
+        self.window!.makeKeyAndVisible();
+        return true
+    }
+    
+    // Tab Bar
+    func initIphone(){
+        
         // Cria os controllers
         let listaController = ListaCarrosViewController(nibName: "ListaCarrosViewController", bundle: nil);
         let sobreController = SobreViewController(nibName: "SobreViewController", bundle: nil);
@@ -34,11 +52,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nav2.tabBarItem.image = UIImage(named: "tab_sobre.png")
         // Configura o UITabBarController como o view controller principal
         self.window!.rootViewController = tabBarController
-        self.window!.makeKeyAndVisible();
-        let db = CarroDB()
-        db.createTable()
-        db.close()
-        return true
+    }
+    
+    // Split View
+    func initIpad(){
+        // Cria os controllers da esquerda e da direita
+        self.detalhesController = DetalhesCarroViewController(nibName: "DetalhesCarroViewController", bundle: nil)
+        self.listaController = ListaCarrosViewController(nibName: "ListaCarrosViewController", bundle: nil)
+        
+        let nav1  = MyNavigationController()
+        let nav2 = MyNavigationController()
+        nav1.pushViewController(listaController, animated: false)
+        nav2.pushViewController(detalhesController, animated: false)
+        // Cria o UISplitController
+        let split = UISplitViewController()
+        // Para compilar precisa fazer DetalhesCarroViewController implementar UISplitViewControllerDelegate
+        split.delegate = detalhesController
+        split.viewControllers = [nav1, nav2]
+        // Deixa o UISplitViewController como o controller principal
+        self.window!.rootViewController = split
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {

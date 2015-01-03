@@ -32,7 +32,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="visualizarMapa" destination="-1" eventType="touchUpInside" id="7Ea-bN-XML"/>
+                        <action selector="visualizarMapa:" destination="-1" eventType="touchUpInside" id="Y4K-xa-bNo"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMX-aC-CCT">
